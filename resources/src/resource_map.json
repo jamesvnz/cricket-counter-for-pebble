@@ -1,0 +1,46 @@
+{
+    "friendlyVersion": "0.1",
+    "versionDefName":  "CRICKET_COUNTER_RESOURCES",
+    "media": [
+        {
+            "type":    "font",
+            "defName": "FONT_20",
+            "file":    "fonts/Roboto-Medium.ttf"
+        },
+        {
+            "type":    "font",
+            "defName": "FONT_24",
+            "file":    "fonts/Roboto-Medium.ttf"
+        },
+        {
+            "type":    "font",
+            "defName": "FONT_40",
+            "file":    "fonts/Roboto-Bold.ttf"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_DOWN",
+            "file":    "images/down.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_UP",
+            "file":    "images/up.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_WICKET",
+            "file":    "images/wicket.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_MENU_ICON",
+            "file":    "images/counter-icon.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_WINDOW_ICON",
+            "file":    "images/window-icon.png"
+        }
+    ]
+}
