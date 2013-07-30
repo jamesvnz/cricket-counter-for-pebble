@@ -13,7 +13,7 @@
 PBL_APP_INFO(MY_UUID,
              "Cricket Counter", "Adam Harvey",
              0, 1, /* App version */
-             DEFAULT_MENU_ICON,
+             RESOURCE_ID_IMAGE_ICON,
              APP_INFO_STANDARD_APP);
 
 struct {

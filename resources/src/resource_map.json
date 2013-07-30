@@ -16,6 +16,11 @@
             "type":    "font",
             "defName": "FONT_40",
             "file":    "fonts/Roboto-Bold.ttf"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_ICON",
+            "file":    "images/counter-icon.png"
         }
     ]
 }
