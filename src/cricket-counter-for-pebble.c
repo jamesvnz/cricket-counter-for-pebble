@@ -102,24 +102,24 @@ void handle_init(AppContextRef ctx) {
     action_bar_layer_set_click_config_provider(&layers.actionBar, click_config_provider);
 
     text_layer_init(&layers.ball, GRect(HORIZONTAL_MARGIN, VERTICAL_MARGIN, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 50));
-    text_layer_set_background_color(&layers.ball, GColorWhite);
+    text_layer_set_background_color(&layers.ball, GColorBlack);
     text_layer_set_font(&layers.ball, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_40)));
     text_layer_set_text_alignment(&layers.ball, GTextAlignmentCenter);
-    text_layer_set_text_color(&layers.ball, GColorBlack);
+    text_layer_set_text_color(&layers.ball, GColorWhite);
     layer_add_child(&layers.top, &layers.ball.layer);
 
     text_layer_init(&layers.over, GRect(HORIZONTAL_MARGIN, 3 * VERTICAL_MARGIN + 50, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 32));
-    text_layer_set_background_color(&layers.over, GColorWhite);
+    text_layer_set_background_color(&layers.over, GColorBlack);
     text_layer_set_font(&layers.over, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_24)));
     text_layer_set_text_alignment(&layers.over, GTextAlignmentCenter);
-    text_layer_set_text_color(&layers.over, GColorBlack);
+    text_layer_set_text_color(&layers.over, GColorWhite);
     layer_add_child(&layers.top, &layers.over.layer);
 
     text_layer_init(&layers.wicket, GRect(HORIZONTAL_MARGIN, 5 * VERTICAL_MARGIN + 82, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 28));
-    text_layer_set_background_color(&layers.wicket, GColorWhite);
+    text_layer_set_background_color(&layers.wicket, GColorBlack);
     text_layer_set_font(&layers.wicket, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_20)));
     text_layer_set_text_alignment(&layers.wicket, GTextAlignmentCenter);
-    text_layer_set_text_color(&layers.wicket, GColorBlack);
+    text_layer_set_text_color(&layers.wicket, GColorWhite);
     layer_add_child(&layers.top, &layers.wicket.layer);
 }
 
