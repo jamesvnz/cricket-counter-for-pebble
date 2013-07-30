@@ -2,7 +2,6 @@
 #include "pebble_app.h"
 #include "pebble_fonts.h"
 #include "cricket.h"
-#include "mini-printf.h"
 
 #define PEBBLE_WIDTH 144 - ACTION_BAR_WIDTH
 #define HORIZONTAL_MARGIN 4
@@ -34,13 +33,13 @@ char overBuffer[17];
 char wicketBuffer[12];
 
 void update_text() {
-    mini_snprintf(ballBuffer, sizeof(ballBuffer), "Ball: %u", innings_get_ball(&innings));
+    snprintf(ballBuffer, sizeof(ballBuffer), "Ball: %u", innings_get_ball(&innings));
     text_layer_set_text(&layers.ball, ballBuffer);
 
-    mini_snprintf(overBuffer, sizeof(overBuffer), "Over: %u", innings_get_over(&innings));
+    snprintf(overBuffer, sizeof(overBuffer), "Over: %u", innings_get_over(&innings));
     text_layer_set_text(&layers.over, overBuffer);
 
-    mini_snprintf(wicketBuffer, sizeof(wicketBuffer), "Wickets: %u", innings_get_wicket(&innings));
+    snprintf(wicketBuffer, sizeof(wicketBuffer), "Wickets: %u", innings_get_wicket(&innings));
     text_layer_set_text(&layers.wicket, wicketBuffer);
 }
 

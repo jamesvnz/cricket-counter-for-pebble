@@ -7,7 +7,7 @@ To reset the app state (for example, when a new innings starts), simply exit the
 
 ## Building
 
-You will need the [Pebble SDK](http://developer.getpebble.com/) installed before building. You'll also need to symlink the various bits and pieces the Pebble SDK requires to build into place, which is most easily done by changing into the top level project directory (ie where this file lives) and running:
+You will need the [Pebble SDK](http://developer.getpebble.com/) installed before building. At least version 1.12 is required. You'll also need to symlink the various bits and pieces the Pebble SDK requires to build into place, which is most easily done by changing into the top level project directory (ie where this file lives) and running:
 
     $PEBBLE_TOPLEVEL/Pebble/tools/create_pebble_project.py --symlink-only $PEBBLE_TOPLEVEL/Pebble/sdk .
 
