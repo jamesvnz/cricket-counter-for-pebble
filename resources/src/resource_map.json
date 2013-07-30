@@ -1,0 +1,16 @@
+{
+    "friendlyVersion": "0.1",
+    "versionDefName":  "CRICKET_COUNTER_RESOURCES",
+    "media": [
+        {
+            "type":    "font",
+            "defName": "FONT_24",
+            "file":    "fonts/Roboto-Medium.ttf"
+        },
+        {
+            "type":    "font",
+            "defName": "FONT_40",
+            "file":    "fonts/Roboto-Bold.ttf"
+        }
+    ]
+}
