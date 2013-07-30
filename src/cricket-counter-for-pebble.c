@@ -125,9 +125,9 @@ void handle_init(AppContextRef ctx) {
     text_layer_set_text_color(&layers.over, GColorBlack);
     layer_add_child(&layers.top, &layers.over.layer);
 
-    text_layer_init(&layers.wicket, GRect(TEXT_MARGIN, 5 * TEXT_MARGIN + 82, PEBBLE_WIDTH - 2 * TEXT_MARGIN, 32));
+    text_layer_init(&layers.wicket, GRect(TEXT_MARGIN, 5 * TEXT_MARGIN + 82, PEBBLE_WIDTH - 2 * TEXT_MARGIN, 28));
     text_layer_set_background_color(&layers.wicket, GColorWhite);
-    text_layer_set_font(&layers.wicket, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_24)));
+    text_layer_set_font(&layers.wicket, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_20)));
     text_layer_set_text_alignment(&layers.wicket, GTextAlignmentCenter);
     text_layer_set_text_color(&layers.wicket, GColorBlack);
     layer_add_child(&layers.top, &layers.wicket.layer);

@@ -4,6 +4,11 @@
     "media": [
         {
             "type":    "font",
+            "defName": "FONT_20",
+            "file":    "fonts/Roboto-Medium.ttf"
+        },
+        {
+            "type":    "font",
             "defName": "FONT_24",
             "file":    "fonts/Roboto-Medium.ttf"
         },
