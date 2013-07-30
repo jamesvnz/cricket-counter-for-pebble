@@ -24,7 +24,7 @@ struct {
     TextLayer wicket;
 } layers;
 
-AppTimerHandle timer;
+HeapBitmap menuIcons[3];
 Window window;
 Innings innings;
 
@@ -97,9 +97,16 @@ void handle_init(AppContextRef ctx) {
     layers.top.update_proc = update_top_callback;
     layer_add_child(&window.layer, &layers.top);
 
+    heap_bitmap_init(&menuIcons[0], RESOURCE_ID_IMAGE_UP);
+    heap_bitmap_init(&menuIcons[1], RESOURCE_ID_IMAGE_WICKET);
+    heap_bitmap_init(&menuIcons[2], RESOURCE_ID_IMAGE_DOWN);
+
     action_bar_layer_init(&layers.actionBar);
     action_bar_layer_add_to_window(&layers.actionBar, &window);
     action_bar_layer_set_click_config_provider(&layers.actionBar, click_config_provider);
+    action_bar_layer_set_icon(&layers.actionBar, BUTTON_ID_UP, &menuIcons[0].bmp);
+    action_bar_layer_set_icon(&layers.actionBar, BUTTON_ID_SELECT, &menuIcons[1].bmp);
+    action_bar_layer_set_icon(&layers.actionBar, BUTTON_ID_DOWN, &menuIcons[2].bmp);
 
     text_layer_init(&layers.ball, GRect(HORIZONTAL_MARGIN, VERTICAL_MARGIN, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 50));
     text_layer_set_background_color(&layers.ball, GColorBlack);

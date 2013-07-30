@@ -19,6 +19,21 @@
         },
         {
             "type":    "png",
+            "defName": "IMAGE_DOWN",
+            "file":    "images/down.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_UP",
+            "file":    "images/up.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_WICKET",
+            "file":    "images/wicket.png"
+        },
+        {
+            "type":    "png",
             "defName": "IMAGE_ICON",
             "file":    "images/counter-icon.png"
         }
