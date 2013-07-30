@@ -13,7 +13,7 @@
 PBL_APP_INFO(MY_UUID,
              "Cricket Counter", "Adam Harvey",
              0, 1, /* App version */
-             RESOURCE_ID_IMAGE_ICON,
+             RESOURCE_ID_IMAGE_MENU_ICON,
              APP_INFO_STANDARD_APP);
 
 struct {
@@ -25,6 +25,7 @@ struct {
 } layers;
 
 HeapBitmap menuIcons[3];
+HeapBitmap windowIcon;
 Window window;
 Innings innings;
 
@@ -87,8 +88,11 @@ void update_top_callback(Layer *me, GContext *ctx) {
 void handle_init(AppContextRef ctx) {
     resource_init_current_app(&CRICKET_COUNTER_RESOURCES);
 
+    heap_bitmap_init(&windowIcon, RESOURCE_ID_IMAGE_WINDOW_ICON);
+
     window_init(&window, "Cricket Counter");
     window_set_background_color(&window, GColorWhite);
+    window_set_status_bar_icon(&window, &windowIcon.bmp);
     window_stack_push(&window, true /* Animated */);
 
     innings_init(&innings);

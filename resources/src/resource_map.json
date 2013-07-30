@@ -34,8 +34,13 @@
         },
         {
             "type":    "png",
-            "defName": "IMAGE_ICON",
+            "defName": "IMAGE_MENU_ICON",
             "file":    "images/counter-icon.png"
+        },
+        {
+            "type":    "png",
+            "defName": "IMAGE_WINDOW_ICON",
+            "file":    "images/window-icon.png"
         }
     ]
 }
