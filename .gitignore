@@ -15,3 +15,18 @@
 *.exe
 *.out
 *.app
+
+# Pebble specific items.
+build
+include
+lib
+pebble_app.ld
+resources/wscript
+tools
+waf
+wscript
+.waf*
+.lock-waf*
+
+# Swapfiles.
+*.sw?
