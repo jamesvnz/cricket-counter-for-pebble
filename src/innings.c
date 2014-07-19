@@ -1,4 +1,3 @@
-#include "pebble_os.h"
 #include "cricket.h"
 
 void innings_init(Innings *innings) {
@@ -41,3 +40,5 @@ void innings_increment_wicket(Innings *innings) {
         innings->wicket++;
     }
 }
+
+/* vim: set cin ai et ts=4 sw=4: */

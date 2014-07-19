@@ -1,0 +1,57 @@
+{
+  "uuid": "a473ddeb-daf1-442b-8af9-7bc60a205339",
+  "shortName": "Cricket Counter",
+  "longName": "Cricket Counter",
+  "companyName": "Adam Harvey",
+  "versionCode": 0,
+  "versionLabel": "0.2.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {},
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "FONT_20",
+        "file": "fonts/Roboto-Medium.ttf"
+      },
+      {
+        "type": "font",
+        "name": "FONT_24",
+        "file": "fonts/Roboto-Medium.ttf"
+      },
+      {
+        "type": "font",
+        "name": "FONT_40",
+        "file": "fonts/Roboto-Bold.ttf"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_DOWN",
+        "file": "images/down.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_UP",
+        "file": "images/up.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_WICKET",
+        "file": "images/wicket.png"
+      },
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/counter-icon.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_WINDOW_ICON",
+        "file": "images/window-icon.png"
+      }
+    ]
+  }
+}

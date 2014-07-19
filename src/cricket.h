@@ -21,3 +21,5 @@ void innings_decrement_wicket(Innings *innings);
 void innings_increment_wicket(Innings *innings);
 
 #endif
+
+/* vim: set cin ai et ts=4 sw=4: */
