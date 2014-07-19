@@ -4,6 +4,7 @@
 #define PEBBLE_WIDTH 144 - ACTION_BAR_WIDTH
 #define HORIZONTAL_MARGIN 4
 #define VERTICAL_MARGIN 6
+#define INNINGS_KEY 1
 
 struct {
     Layer *top;
@@ -90,6 +91,7 @@ void handle_init() {
     window_stack_push(window, true);
 
     innings_init(&innings);
+    persist_read_data(INNINGS_KEY, &innings, sizeof(innings));
 
     layers.top = layer_create(layer_get_frame(window_get_root_layer(window)));
     layer_set_update_proc(layers.top, update_top_callback);
@@ -126,6 +128,8 @@ void handle_init() {
 }
 
 void handle_deinit() {
+    persist_write_data(INNINGS_KEY, &innings, sizeof(innings));
+
     window_destroy(window);
 
     gbitmap_destroy(windowIcon);
