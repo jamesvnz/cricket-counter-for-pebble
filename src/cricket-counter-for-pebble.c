@@ -41,6 +41,14 @@ void handle_down(ClickRecognizerRef recognizer, void *ctx) {
     update_text();
 }
 
+void handle_reset(ClickRecognizerRef recognizer, void *ctx) {
+    (void) recognizer;
+    (void) ctx;
+
+    innings_init(&innings);
+    update_text();
+}
+
 void handle_select(ClickRecognizerRef recognizer, void *ctx) {
     (void) recognizer;
     (void) ctx;
@@ -62,7 +70,9 @@ void click_config_provider(void *ctx) {
 
     window_single_repeating_click_subscribe(BUTTON_ID_UP, 100, handle_up);
     window_single_repeating_click_subscribe(BUTTON_ID_DOWN, 100, handle_down);
-    window_single_repeating_click_subscribe(BUTTON_ID_SELECT, 100, handle_select);
+
+    window_single_click_subscribe(BUTTON_ID_SELECT, handle_select);
+    window_long_click_subscribe(BUTTON_ID_SELECT, 500, handle_reset, NULL);
 }
 
 void update_top_callback(Layer *me, GContext *ctx) {
