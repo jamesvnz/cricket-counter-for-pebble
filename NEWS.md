@@ -1,5 +1,9 @@
 # Version History
 
+## 0.3 (November 2015)
+* Forked from original
+* Altered logic to handle kid's cricket rules (8 balls max)
+
 ## 0.2 (July 19, 2014)
 
 * Update to the 2.3 SDK (should run on watches running 2.1+).

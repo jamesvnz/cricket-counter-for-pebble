@@ -11,7 +11,7 @@ struct {
     ActionBarLayer *actionBar;
     TextLayer *ball;
     TextLayer *over;
-    TextLayer *wicket;
+    TextLayer *widesAndNb;
 } layers;
 
 GBitmap *menuIcons[3];
@@ -21,7 +21,7 @@ Innings innings;
 
 char ballBuffer[8];
 char overBuffer[17];
-char wicketBuffer[12];
+char widesAndNbBuffer[12];
 
 void update_text() {
     snprintf(ballBuffer, sizeof(ballBuffer), "Ball: %u", innings_get_ball(&innings));
@@ -30,15 +30,15 @@ void update_text() {
     snprintf(overBuffer, sizeof(overBuffer), "Over: %u", innings_get_over(&innings));
     text_layer_set_text(layers.over, overBuffer);
 
-    snprintf(wicketBuffer, sizeof(wicketBuffer), "Wickets: %u", innings_get_wicket(&innings));
-    text_layer_set_text(layers.wicket, wicketBuffer);
+    snprintf(widesAndNbBuffer, sizeof(widesAndNbBuffer), "Wd/NB: %u", innings_get_widesAndNb(&innings));
+    text_layer_set_text(layers.widesAndNb, widesAndNbBuffer);
 }
 
 void handle_down(ClickRecognizerRef recognizer, void *ctx) {
     (void) recognizer;
     (void) ctx;
 
-    innings_decrement_ball(&innings);
+    innings_increment_widesAndNb(&innings);
     update_text();
 }
 
@@ -54,7 +54,7 @@ void handle_select(ClickRecognizerRef recognizer, void *ctx) {
     (void) recognizer;
     (void) ctx;
 
-    innings_increment_wicket(&innings);
+    innings_decrement_ball(&innings);
     update_text();
 }
 
@@ -120,11 +120,11 @@ void handle_init() {
     text_layer_set_text_color(layers.over, GColorBlack);
     layer_add_child(layers.top, text_layer_get_layer(layers.over));
 
-    layers.wicket = text_layer_create(GRect(HORIZONTAL_MARGIN, 5 * VERTICAL_MARGIN + 82, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 28));
-    text_layer_set_font(layers.wicket, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_20)));
-    text_layer_set_text_alignment(layers.wicket, GTextAlignmentCenter);
-    text_layer_set_text_color(layers.wicket, GColorBlack);
-    layer_add_child(layers.top, text_layer_get_layer(layers.wicket));
+    layers.widesAndNb = text_layer_create(GRect(HORIZONTAL_MARGIN, 5 * VERTICAL_MARGIN + 82, PEBBLE_WIDTH - 2 * VERTICAL_MARGIN, 28));
+    text_layer_set_font(layers.widesAndNb, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_20)));
+    text_layer_set_text_alignment(layers.widesAndNb, GTextAlignmentCenter);
+    text_layer_set_text_color(layers.widesAndNb, GColorBlack);
+    layer_add_child(layers.top, text_layer_get_layer(layers.widesAndNb));
 }
 
 void handle_deinit() {

@@ -5,20 +5,23 @@
 
 typedef struct {
     unsigned short ball;
-    unsigned char wicket;
+    unsigned char widesAndNb;
+    unsigned short over;
+    unsigned char lastBall;
 } Innings;
 
 void innings_init(Innings *innings);
 
 unsigned char innings_get_ball(Innings *innings);
 unsigned short innings_get_over(Innings *innings);
-unsigned char innings_get_wicket(Innings *innings);
+unsigned char innings_get_widesAndNb(Innings *innings);
 
 void innings_decrement_ball(Innings *innings);
 void innings_increment_ball(Innings *innings);
+void internal_innings_increment_ball(Innings *innings, char isWideOrNb);
 
-void innings_decrement_wicket(Innings *innings);
-void innings_increment_wicket(Innings *innings);
+void innings_decrement_widesAndNb(Innings *innings);
+void innings_increment_widesAndNb(Innings *innings);
 
 #endif
 
